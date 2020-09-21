@@ -17,13 +17,12 @@ body {
 
 body {
   background: rgba(35, 21, 40, 1) 7%;
-
 }
 
 header {
   position: relative;
   display: flex;
-  min-width: 100vh;
+  min-width: 100%;
   min-height: 100vh;
 }
 
@@ -104,7 +103,6 @@ nav ul li a {
   color: #f5c708;
 }
 
-
 .content img {
   position: absolute;
   height: auto;
@@ -114,5 +112,11 @@ nav ul li a {
 .projects {
   height: 100vh;
   background: rgb(35, 21, 40);
-  background: linear-gradient(180deg, rgba(35, 21, 40, 1) 7%, rgba(95, 35, 71, 1) 32%, rgba(128, 51, 121, 1) 65%, rgba(255, 172, 114, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(35, 21, 40, 1) 7%,
+    rgba(95, 35, 71, 1) 32%,
+    rgba(128, 51, 121, 1) 65%,
+    rgba(255, 172, 114, 1) 100%
+  );
 }
