@@ -125,3 +125,33 @@ nav ul li a {
   letter-spacing: 4px;
   font-size: 45px;
 }
+
+.projects img{
+  position: absolute;
+  width: 320px;
+  height: 180px;
+  background-color:  rgba(35, 21, 40, 1) 7%;
+  opacity: 0.4;
+}
+
+.projectimage{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.projects img:nth-of-type(1){
+  margin-top: 10%;
+  left: 10%;
+}
+
+.projects img:nth-of-type(2){
+  margin-top: 20%;
+  margin-right: 5%;
+  right: 5%;
+}
+
+.projects img:nth-of-type(1){
+  margin-top: 30%;
+  left: 10%;
+}
+
