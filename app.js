@@ -24,3 +24,4 @@ window.addEventListener('scroll', function(){
     let value = 1 + window.scrollY/ -400;
     video.style.opacity = value;
 })
+
