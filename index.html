@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <video class="video" autoplay muted loop id="video">
+    <video class="" autoplay muted loop id="video">
         <source src="/images/background.mp4" type="video/mp4">
     </video>
     <header>
@@ -37,14 +37,18 @@
         </section>
     </header>
     <main>
-        <section id="PORTFOLIO" class="projects">
-            <h1>{projects}</h1>
-            <img data-aos="fade-right" src="images/arduino.jpg">
-            <img data-aos="fade-left" src="images/database.jpg">
-            <img data-aos="fade-right" src="images/music.png">
+        <section class="projects">
+            <div id="container">
+                <div class="center">
+                  <h1 class="el-st">{projects}</h1>
+                </div>
+              </div>
+            <img src="images/arduino.jpg">
+            <img src="images/database.jpg">
+            <img src="images/music.png">
         </section>
     </main>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
