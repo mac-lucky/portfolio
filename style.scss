@@ -1,6 +1,6 @@
 $icon-size: 80px;
 $w: 300px;
-$fw: 100vh;
+$fw: 100vw;
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 @mixin lightsaber($color) {
@@ -500,7 +500,7 @@ $bp-mobile:800px;
     top: 0;
     bottom: 0px;
     // padding-right: 16px;
-    width: 100%;
+    width:100%;
     text-align: center;
 
     ul {
@@ -525,31 +525,31 @@ $bp-mobile:800px;
         &:hover {
           @include lightsaber(#4df);
           width: 100%;
-          padding: 0px 16px 0px 0px;
+          // padding: 0px 16px 0px 0px;
           color: black;
         }
 
         a {
           display: block;
           text-decoration: none;
-          width: $w;
+          width: 97vw;
           color: inherit;
           // padding-left: 16px;
         }
 
-        &.green {
+        &.green:hover {
           @include lightsaber(#0f0);
         }
 
-        &.red {
+        &.red:hover {
           @include lightsaber(#f00);
         }
 
-        &.purple {
+        &.purple:hover {
           @include lightsaber(#c0c);
         }
 
-        &.yellow {
+        &.yellow:hover {
           @include lightsaber(#ff0);
         }
       }

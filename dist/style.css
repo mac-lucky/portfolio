@@ -453,7 +453,6 @@ nav ul li a {
     background: #ecfcff;
     box-shadow: #4df 0px 0px 0px 2px;
     width: 100%;
-    padding: 0px 16px 0px 0px;
     color: black;
   }
   .mobile ul li:hover:hover {
@@ -463,38 +462,38 @@ nav ul li a {
   .mobile ul li a {
     display: block;
     text-decoration: none;
-    width: 300px;
+    width: 97vw;
     color: inherit;
   }
-  .mobile ul li.green {
+  .mobile ul li.green:hover {
     background: #e6ffe6;
     box-shadow: #0f0 0px 0px 0px 2px;
   }
-  .mobile ul li.green:hover {
+  .mobile ul li.green:hover:hover {
     box-shadow: #0f0 0px 0px 20px 2px;
     text-shadow: #0f0 0px 0px 6px, #0f0 0px 0px 10px;
   }
-  .mobile ul li.red {
+  .mobile ul li.red:hover {
     background: #ffe6e6;
     box-shadow: #f00 0px 0px 0px 2px;
   }
-  .mobile ul li.red:hover {
+  .mobile ul li.red:hover:hover {
     box-shadow: #f00 0px 0px 20px 2px;
     text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px;
   }
-  .mobile ul li.purple {
+  .mobile ul li.purple:hover {
     background: #fae6fa;
     box-shadow: #c0c 0px 0px 0px 2px;
   }
-  .mobile ul li.purple:hover {
+  .mobile ul li.purple:hover:hover {
     box-shadow: #c0c 0px 0px 20px 2px;
     text-shadow: #c0c 0px 0px 6px, #c0c 0px 0px 10px;
   }
-  .mobile ul li.yellow {
+  .mobile ul li.yellow:hover {
     background: #ffffe6;
     box-shadow: #ff0 0px 0px 0px 2px;
   }
-  .mobile ul li.yellow:hover {
+  .mobile ul li.yellow:hover:hover {
     box-shadow: #ff0 0px 0px 20px 2px;
     text-shadow: #ff0 0px 0px 6px, #ff0 0px 0px 10px;
   }
