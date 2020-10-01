@@ -1,5 +1,6 @@
 $icon-size: 80px;
 $w: 300px;
+$fw: 100vh;
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 @mixin lightsaber($color) {
@@ -239,7 +240,7 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px;
+  margin: 40px 0;
   background: #060c21;
   transition: 0.5s;
 }
@@ -498,12 +499,13 @@ $bp-mobile:800px;
     top: $icon-size;
     bottom: 0px;
     padding-right: 16px;
-    width: $w;
+    width: $fw;
 
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
+      flex-direction: column;
 
       //font-weight:bolder;
       li {

@@ -213,7 +213,7 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px;
+  margin: 40px 0;
   background: #060c21;
   transition: 0.5s;
 }
@@ -427,7 +427,7 @@ nav ul li a {
     top: 80px;
     bottom: 0px;
     padding-right: 16px;
-    width: 300px;
+    width: 100vh;
   }
   .mobile.show {
     transform: translatex(0%);
@@ -436,6 +436,7 @@ nav ul li a {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-direction: column;
   }
   .mobile ul li {
     background: #ecfcff;
