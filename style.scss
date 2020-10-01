@@ -378,6 +378,7 @@ $bp-mobile:800px;
     position: absolute;
     top: 0%;
     left: 0%;
+    z-index: 2;
   }
 
   #burger {
@@ -492,14 +493,15 @@ $bp-mobile:800px;
 
     font-family: Open Sans;
     color: white;
-    background: #111;
+    background: rgba(1, 1, 1, 0.85);
     position: absolute;
     transform: translatex(-100%);
     transition: transform 0.2s ease;
-    top: $icon-size;
+    top: 0;
     bottom: 0px;
-    padding-right: 16px;
-    width: $fw;
+    // padding-right: 16px;
+    width: 100%;
+    text-align: center;
 
     ul {
       list-style: none;
@@ -509,7 +511,7 @@ $bp-mobile:800px;
 
       //font-weight:bolder;
       li {
-        @include lightsaber(#4df);
+
         font-size: 1.75em;
         line-height: 1.25em;
         padding: 0px;
@@ -521,6 +523,7 @@ $bp-mobile:800px;
           text-shadow 0.2s ease;
 
         &:hover {
+          @include lightsaber(#4df);
           width: 100%;
           padding: 0px 16px 0px 0px;
           color: black;
@@ -531,7 +534,7 @@ $bp-mobile:800px;
           text-decoration: none;
           width: $w;
           color: inherit;
-          padding-left: 16px;
+          // padding-left: 16px;
         }
 
         &.green {
