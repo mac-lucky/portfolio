@@ -19,14 +19,31 @@
         <source src="/images/background.mp4" type="video/mp4">
     </video>
     <header>
-        <nav>
+        <div id="menu">
+            <div id="burger">
+                <div class="bun top"></div>
+                <div class="filling"></div>
+                <div class="bun bottom"></div>
+            </div>
+        </div>
+        <!-- <nav class="mobile">
             <img src="/images/name.png" class='logo'>
             <ul>
                 <li><a href="#HOME">Home</a></li>
-                <li><a href="#PROJECTS">Projects</a></li>
-                <li><a href="#SKILLS">Skills</a></li>
-                <li><a href="#ABOUT ME">About</a></li>
-                <li><a href="#CONTACT">Contact</a></li>
+                <li class="green"><a href="#PROJECTS">Projects</a></li>
+                <li class="red"><a href="#SKILLS">Skills</a></li>
+                <li class="yellow"><a href="#ABOUT ME">About</a></li>
+                <li class="purple"><a href="#CONTACT">Contact</a></li>
+            </ul>
+        </nav> -->
+        <nav class="mobile">
+            <img src="/images/name.png" class='logo'>
+            <ul>
+                <li><a href="#HOME">Home</a></li>
+                <li class="green"><a href="#PROJECTS">Projects</a></li>
+                <li class="red"><a href="#SKILLS">Skills</a></li>
+                <li class="yellow"><a href="#ABOUT ME">About</a></li>
+                <li class="purple"><a href="#CONTACT">Contact</a></li>
             </ul>
         </nav>
         <section class="info">
@@ -40,48 +57,49 @@
         <section class="projects">
             <div id="container">
                 <div class="center">
-                  <h1 class="el-st">{projects}</h1>
+                    <h1 class="el-st">{projects}</h1>
                 </div>
-              </div>
+            </div>
             <div class="projectscards">
-            <div class="boxwrap">
-            <div class="box">
-                <div class="imgBx">
-                    <img src="/images/arduino.jpg">
+                <div class="boxwrap">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="/images/arduino.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Arduino<br><span>Weather Station with RTC and<br>move detector</span></h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="content">
-                    <h2>Arduino<br><span>Weather Station with RTC and<br>move detector</span></h2>
+                <div class="boxwrap">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="/images/database.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Arduino<br><span>Weather Station with RTC and<br>move detector</span></h2>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
-            <div class="boxwrap">
-            <div class="box">
-                <div class="imgBx">
-                    <img src="/images/database.jpg">
+                <div class="boxwrap">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="/images/music.png">
+                        </div>
+                        <div class="content">
+                            <h2>Arduino<br><span>Weather Station with RTC and<br>move detector</span></h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="content">
-                    <h2>Arduino<br><span>Weather Station with RTC and<br>move detector</span></h2>
-                </div>
-            </div>
-            </div>
-            <div class="boxwrap">
-            <div class="box">
-                <div class="imgBx">
-                    <img src="/images/music.png">
-                </div>
-                <div class="content">
-                    <h2>Arduino<br><span>Weather Station with RTC and<br>move detector</span></h2>
-                </div>
-            </div>
-            </div>
             </div>
         </section>
     </main>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="app.js"></script>
+    <script src="hamburger.js"></script>
     <script>
         AOS.init({
             duration: 1200
