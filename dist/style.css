@@ -327,6 +327,9 @@ nav ul li a {
 
   nav {
     display: none;
+    height: unset;
+    position: absolute;
+    padding: unset;
   }
 
   #menu {

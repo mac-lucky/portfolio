@@ -366,6 +366,9 @@ $bp-mobile:800px;
 
   nav {
     display: none;
+    height: unset;
+    position: absolute;
+    padding: unset;
   }
 
   #menu {
