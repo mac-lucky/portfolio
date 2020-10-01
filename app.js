@@ -166,3 +166,11 @@ var stringRandom = (function() {
 
 stringRandom.init('.el-st');
 
+//Navbar scroll effect
+
+let progress = document.getElementById('progressbar');
+let totalHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function(){
+    progressHeight = (window.pageYOffset / totalHeight) * 100;
+    progress.style.height = progressHeight + "%";
+}
