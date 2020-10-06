@@ -136,12 +136,4 @@ var stringRandom = function () {
   };
 }();
 
-stringRandom.init('.el-st'); //Navbar scroll effect
-
-var progress = document.getElementById('progressbar');
-var totalHeight = document.body.scrollHeight - window.innerHeight;
-
-window.onscroll = function () {
-  progressHeight = window.pageYOffset / totalHeight * 100;
-  progress.style.height = progressHeight + "%";
-};
+stringRandom.init('.el-st');
