@@ -1,3 +1,3 @@
-# Portfolio landing page
+# My Portfolio
 
-Company
+This is my Porfolio site. I used SCSS and Javascript for the animations.
