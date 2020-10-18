@@ -95,7 +95,7 @@ nav ul li a {
   text-align: center;
 }
 
-.info .content {
+.info .front {
   position: relative;
   width: 60%;
   height: 100%;
@@ -107,7 +107,7 @@ nav ul li a {
   align-items: center;
 }
 
-.content h1 {
+.front h1 {
   color: white;
   line-height: 60px;
   font-family: "Mukta", sans-serif;
@@ -120,7 +120,7 @@ nav ul li a {
   color: #f5c708;
 }
 
-.content img {
+.front img {
   position: absolute;
   height: auto;
   width: 100%;
@@ -128,7 +128,7 @@ nav ul li a {
 
 .projects {
   width: 100%;
-  height: 200vh;
+  padding-bottom: 5rem;
   background-image: url(/images/nightcity.jpg);
   background-size: cover;
 }
