@@ -203,7 +203,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 5%;
+  margin-top: 5rem;
 }
 
 .box {
@@ -263,7 +263,7 @@ nav ul li a {
   right: -2px;
   bottom: -2px;
   background: #eee;
-  z-index: -2;
+  z-index: -1;
   filter: blur(40px);
 }
 
@@ -302,6 +302,7 @@ nav ul li a {
 }
 
 .box .content h2 {
+  font-family: "Mukta", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
@@ -310,9 +311,10 @@ nav ul li a {
 }
 
 .box .content h2 span {
+  font-family: "Mukta", sans-serif;
   font-size: 14px;
   font-weight: 200;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #eee;
 }
 
