@@ -345,6 +345,10 @@ nav ul li a {
 }
 
 @media (hover: hover) and (min-width: 600px) {
+  .page-content {
+    padding: 0 !important;
+  }
+
   .card:after {
     transform: translateY(0);
   }

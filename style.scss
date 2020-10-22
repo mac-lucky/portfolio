@@ -405,6 +405,10 @@ $bp-elg: 1150px;
 }
 
 @media (hover: hover) and (min-width: $bp-md) {
+  .page-content{
+    padding: 0 !important;
+  }
+
   .card:after {
     transform: translateY(0);
   }
