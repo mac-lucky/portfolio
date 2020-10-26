@@ -21,7 +21,7 @@ $fw: 100vw;
   text-decoration: none;
 }
 
-h1 {
+h1 p {
   color: white;
 }
 
@@ -138,7 +138,7 @@ nav ul li a {
 }
 
 .center {
-  padding-top: 5%;
+  padding-top: 5rem;
 }
 
 /* the text animation*/
@@ -682,4 +682,18 @@ $bp-mobile:800px;
       opacity: 1;
     }
   }
+}
+
+.skills {
+  background-color: #fff;
+  width: 100%;
+  padding-top: 5rem;
+  background-image: url(/images/nightcity.jpg);
+  background-size: cover;
+}
+
+.allskills {
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 5rem;
 }
