@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -104,15 +105,35 @@
         </div>
     </section>
     <section class="skills">
-        <!-- <div id="container">
-            <div class="center">
-                <h1 class="el-st">{skills}</h1>
+        <div class="wrapper">
+            <div class="neon-wrapper">
+                <span class="txt">SKILLS</span>
+                <span class="gradient"></span>
+                <span class="dodge"></span>
             </div>
-        </div>  -->
+        </div>
         <div class="allskills">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsam deleniti aliquid nisi dignissimos
-                harum ea a, unde consequuntur repudiandae, aperiam iure neque labore possimus perferendis excepturi.
-                Laudantium, suscipit quibusdam.</p>
+            <div class="left">
+                <h1 data-aos="fade-down">HTML, CSS</h1>
+                <img data-aos="fade-up" src="/images/violet.png">
+            </div>
+            <div class="right">
+                <h1 data-aos="fade-down">JavaScript, Python</h1>
+                <img data-aos="fade-up" src="/images/red.png">
+            </div>
+            <div class="left">
+                <h1 data-aos="fade-down">C, C++</h1>
+                <img data-aos="fade-up" src="/images/violet.png">
+            </div>
+            <div class="right">
+                <h1 data-aos="fade-down">VHDL</h1>
+                <img data-aos="fade-up" src="/images/red.png">
+            </div>
+        </div>
+    </section>
+    <section class="aboutme">
+        <div class="width">
+            <h1 data-aos="fade-right">{about me}</h1>
         </div>
     </section>
     </main>
@@ -120,6 +141,11 @@
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="app.js"></script>
     <script src="hamburger.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>
