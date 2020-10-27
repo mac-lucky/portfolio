@@ -697,7 +697,12 @@ nav ul li a {
   }
 
   .copy {
-    font-size: 25px;
+    font-size: 22px;
+  }
+
+  .btn {
+    padding: 1rem 3rem !important;
+    font-size: 0.8rem !important;
   }
 
   .txt {
