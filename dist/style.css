@@ -98,7 +98,6 @@ nav ul li a {
 
 .front h1 {
   color: white;
-  line-height: 60px;
   font-family: "Mukta", sans-serif;
   letter-spacing: 4px;
   margin-top: -30%;
@@ -679,9 +678,31 @@ nav ul li a {
   }
 }
 @media (max-width: 800px) {
+  .front img {
+    width: 950px !important;
+    display: none;
+  }
+
+  .front h1 {
+    font-size: 30px !important;
+    margin-top: -55% !important;
+  }
+
+  .page-content {
+    width: 100% !important;
+  }
+
+  .title {
+    font-size: 30px !important;
+  }
+
+  .copy {
+    font-size: 25px;
+  }
+
   .txt {
     letter-spacing: 1rem;
-    font-size: 150px;
+    font-size: 85px;
     margin-right: 0;
   }
 
@@ -699,6 +720,16 @@ nav ul li a {
 
   .skills {
     padding-bottom: 0rem !important;
+  }
+
+  .el-st {
+    font-size: 45px !important;
+    text-align: center;
+    margin-right: 2rem;
+  }
+
+  .aboutme {
+    text-align: center;
   }
 }
 .right {
@@ -735,15 +766,4 @@ nav ul li a {
   font-family: "Mukta", sans-serif;
   letter-spacing: 4px;
   font-size: 45px;
-}
-
-@media (max-width: 800px) {
-  .el-st {
-    font-size: 55px !important;
-    text-align: center;
-  }
-
-  .aboutme {
-    text-align: center;
-  }
 }
