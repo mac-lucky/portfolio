@@ -9,11 +9,16 @@
 
 h1 {
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Mukta", sans-serif;
 }
 
 p {
   color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.05rem;
+  line-height: 130%;
 }
 
 html,
@@ -97,8 +102,6 @@ nav ul li a {
 }
 
 .front h1 {
-  color: white;
-  font-family: "Mukta", sans-serif;
   letter-spacing: 4px;
   margin-top: -30%;
   font-size: 35px;
@@ -207,7 +210,7 @@ nav ul li a {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
   --font-sans: "Rubik", sans-serif;
-  --font-serif: "Cardo", serif;
+  --font-serif: "Montserrat", sans-serif;
 }
 
 .projectcard {
@@ -250,7 +253,7 @@ nav ul li a {
   text-align: center;
   color: whitesmoke;
   background-color: #833C83;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 40px cyan;
 }
 @media (min-width: 600px) {
   .card {
@@ -325,7 +328,7 @@ nav ul li a {
 .copy {
   font-family: var(--font-serif);
   font-size: 1.125rem;
-  font-style: italic;
+  font-weight: 200;
   line-height: 1.35;
 }
 
@@ -728,13 +731,56 @@ nav ul li a {
   }
 
   .el-st {
-    font-size: 45px !important;
+    font-size: 40px !important;
     text-align: center;
     margin-right: 2rem;
   }
 
   .aboutme {
     text-align: center;
+  }
+
+  .imageover {
+    margin-top: 5rem !important;
+    width: auto !important;
+  }
+
+  .imageover img {
+    width: 150px !important;
+  }
+
+  .wall {
+    position: relative;
+    top: 0;
+    left: 70px !important;
+  }
+
+  .plat {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+  }
+
+  .sleep {
+    position: absolute;
+    top: 150px !important;
+    left: 170px !important;
+  }
+
+  .old {
+    position: absolute;
+    top: 180px !important;
+    left: 30px;
+  }
+
+  .abouttext {
+    width: auto !important;
+    padding-top: 15rem !important;
+    padding-left: 0 !important;
+  }
+
+  .flex {
+    display: block !important;
   }
 }
 .right {
@@ -768,7 +814,54 @@ nav ul li a {
 
 .aboutme h1 {
   font-weight: bold;
-  font-family: "Mukta", sans-serif;
   letter-spacing: 4px;
   font-size: 45px;
+}
+
+.imageover {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: 10rem;
+  opacity: 0.7;
+  width: 50%;
+}
+
+.imageover img {
+  width: 300px;
+  height: auto;
+}
+
+.wall {
+  position: relative;
+  top: 0;
+  left: 300px;
+}
+
+.plat {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
+
+.sleep {
+  position: absolute;
+  top: 300px;
+  left: 320px;
+}
+
+.old {
+  position: absolute;
+  top: 330px;
+  left: 30px;
+}
+
+.abouttext {
+  width: 50%;
+  padding-top: 12rem;
+  padding-left: 10%;
+}
+
+.flex {
+  display: flex;
 }
