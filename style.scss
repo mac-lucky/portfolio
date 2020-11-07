@@ -88,7 +88,8 @@ nav ul li {
 nav ul li a {
   font-size: 18px;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   color: #f5c708;
 }
 
@@ -843,48 +844,18 @@ $bp-mobile:800px;
     text-align: center;
   }
 
-  .imageover{
-    margin-top: 5rem !important;
+  .imageover {
+    justify-content: center;
     width: auto !important;
+    padding-left: 0rem !important;
   }
-  
-  .imageover img{
-    width: 150px !important;
-  }
-  
-  .wall
-  {
-    position: relative;
-    top: 0;
-    left: 70px !important;
-  }
-  .plat
-  {
-    position: absolute;
-    top: 40px;
-    left: 20px;
-  }
-  
-  .sleep
-  {
-    position: absolute;
-    top: 150px !important;
-    left: 170px !important;
-  }
-  
-  .old{
-    position: absolute;
-    top: 180px !important;
-    left: 30px;
-  }
-  
-  .abouttext{
+
+  .abouttext {
     width: auto !important;
-    padding-top: 15rem !important;
-    padding-left: 0 !important;
+    padding-top: 5rem;
   }
-  
-  .flex{
+
+  .flex {
     display: block !important;
   }
 
@@ -925,52 +896,59 @@ $bp-mobile:800px;
   font-size: 45px;
 }
 
-.imageover{
-  position: relative; 
-  left: 0; 
-  top: 0;
-  margin-top: 10rem;
+.imageover {
   opacity: 0.7;
   width: 50%;
+  padding-left: 5rem;
 }
 
-.imageover img{
-  width: 300px;
+.imageover img {
+  width: 350px;
   height: auto;
+  animation: out 0.5s ease-in;
+  animation-fill-mode: forwards;  
+  box-shadow: 0px 0px 80px cyan;
 }
 
-.wall
-{
-  position: relative;
-  top: 0;
-  left: 300px;
-}
-.plat
-{
-  position: absolute;
-  top: 40px;
-  left: 20px;
+.imageover img:hover {
+  animation: in 0.5s ease-in;
+  animation-fill-mode: forwards;  
 }
 
-.sleep
-{
-  position: absolute;
-  top: 300px;
-  left: 320px;
+@keyframes in {
+  from {
+    border-radius: 40px;
+    box-shadow: 0px 0px 80px cyan;
+  }
+
+  to {
+    border-radius: 0px;
+    box-shadow: 0px 0px 120px cyan;
+  }
 }
 
-.old{
-  position: absolute;
-  top: 330px;
-  left: 30px;
+@keyframes out {
+  from {
+    border-radius: 0px;
+    box-shadow: 0px 0px 120px cyan;
+  }
+
+  to {
+    border-radius: 40px;
+    box-shadow: 0px 0px 80px cyan;
+  }
 }
 
-.abouttext{
-  width: 50%;
-  padding-top: 12rem;
-  padding-left: 10%;
-}
 
-.flex{
+.abouttext {
   display: flex;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+}
+
+.flex {
+
+  display: flex;
+  padding-top: 8rem;
 }
