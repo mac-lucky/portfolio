@@ -847,7 +847,11 @@ $bp-mobile:800px;
   .imageover {
     justify-content: center;
     width: auto !important;
-    padding-left: 0rem !important;
+    padding-left: 0px !important;
+  }
+
+  .imageover img{
+    max-width: 100%;
   }
 
   .abouttext {
@@ -859,6 +863,37 @@ $bp-mobile:800px;
     display: block !important;
   }
 
+  .contact h1{
+    text-align: center;
+  }
+
+  .icons{
+    display: block !important;
+  }
+
+  .icontext{
+    padding-bottom: 2rem;
+    display: flex;
+    align-items:center;
+  }
+
+  .icontext p{
+    margin-top: -1rem;
+    padding-left: 4rem;
+  }
+
+  .icons i {
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 100px !important;
+    font-size: 60px !important;
+  }
+
+  .icons{
+    width: 90% !important;
+    margin: auto;
+  }
+  
 }
 
 .right {
@@ -884,8 +919,7 @@ $bp-mobile:800px;
 }
 
 .aboutme {
-  background: linear-gradient(180deg, rgba(139, 23, 145, 1) 20%, rgba(31, 106, 166, 1) 60%, rgba(166, 157, 31, 1) 86%);
-  height: 200vh;
+  background: linear-gradient(180deg, rgba(139, 23, 145, 1) 21%, rgb(77, 9, 77) 65%);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -906,13 +940,13 @@ $bp-mobile:800px;
   width: 350px;
   height: auto;
   animation: out 0.5s ease-in;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
   box-shadow: 0px 0px 80px cyan;
 }
 
 .imageover img:hover {
   animation: in 0.5s ease-in;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
 }
 
 @keyframes in {
@@ -942,13 +976,87 @@ $bp-mobile:800px;
 
 .abouttext {
   display: flex;
+  flex-direction: column;
   width: 50%;
   text-align: center;
   align-items: center;
 }
 
-.flex {
+.abouttext p{
+  padding-top: 3rem;
+}
 
+.flex {
   display: flex;
   padding-top: 8rem;
+}
+
+.contact {
+  background: linear-gradient(180deg, rgb(77, 9, 77) 23%, rgba(207, 30, 37, 1) 98%);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.contact h1 {
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 45px;
+  padding-bottom: 5rem;
+}
+
+.icontext p {
+  font-size: 16px !important;
+  padding-top: 1rem;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.icons {
+  padding-top: 5rem;
+  display:flex;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+
+.icons i {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  line-height: 93px;
+  background: #666;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #eee;
+  transition: .5s;
+}
+
+
+.icons i:hover::before {
+  transform: scale(1.1);
+
+}
+
+.icons i:hover {
+  color: #ffee10;
+  box-shadow: 0 0 30px #ffee10;
+  text-shadow: 0 0 10px #ffee10;
+}
+
+.bottomtext{
+  padding-top: 15rem;
+  text-align: center;
+  font-size: 16px;
+}
+
+.twobut{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
