@@ -1,3 +1,5 @@
-# My Portfolio
+# Portfolio
 
-This is my Porfolio site. I used SCSS and Javascript for the animations.
+Portfolio hosted site with current projects.
+
+[LIVE DEMO](https://www.imfine.pl)
