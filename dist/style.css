@@ -294,7 +294,7 @@ nav ul li a {
   background-image: url(/images/music.png);
 }
 .card:nth-child(3):before {
-  background-image: url(/images/database.jpg);
+  background-image: url(/images/covid.png);
 }
 .card:nth-child(4):before {
   background-image: url(/images/spartan.jpg);
