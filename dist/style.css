@@ -790,6 +790,11 @@ nav ul li a {
     width: 90% !important;
     margin: auto;
   }
+
+  .btn-15 {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
 }
 .right {
   width: 40%;
