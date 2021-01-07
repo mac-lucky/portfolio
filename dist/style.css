@@ -288,7 +288,7 @@ nav ul li a {
   transition: transform calc(var(--d) * 2) var(--e);
 }
 .cardweb:nth-child(1):before {
-  background-image: url(/images/music.png);
+  background-image: url(/images/piero.png);
 }
 .cardweb:nth-child(2):before {
   background-image: url(/images/covid.png);
@@ -297,7 +297,7 @@ nav ul li a {
   background-image: url(/images/designpage.png);
 }
 .cardweb:nth-child(4):before {
-  background-image: url(/images/piero.png);
+  background-image: url(/images/music.png);
 }
 .cardweb:nth-child(5):before {
   background-image: url(/images/maliwspaniali.png);
