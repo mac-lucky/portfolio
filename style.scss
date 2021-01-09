@@ -895,8 +895,8 @@ $bp-mobile:800px;
   }
 
   .btn-15 {
-    margin-left: 1rem!important;
-    margin-right: 1rem!important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
   }
 
 }
@@ -1085,14 +1085,13 @@ $bp-mobile:800px;
   text-decoration: none;
   letter-spacing: 2px;
   color: #fff;
-  -webkit-box-reflect: below 0px linear-gradient (transparent, #0002);
   transition: 0.5s;
   transition-delay: 0s;
 }
 
 .resume a:hover {
-  color: #000;
   transition-delay: 1.5s;
+  color: #000;
   box-shadow: 0 0 10px #f5c708,
     0 0 20px #f5c708,
     0 0 40px #f5c708,
@@ -1146,7 +1145,7 @@ $bp-mobile:800px;
   height: 100%;
   right: -2px;
   box-shadow: -5px 0 0 #f5c708, -5px 0 0 #f5c708;
-  transition-delay: 0s, 0s, 1s, 1s;
+  transition-delay: 0s, 0.5s, 1s, 1s;
 }
 
 .resume a span {
@@ -1205,6 +1204,7 @@ $bp-mobile:800px;
   margin-left: 3rem;
   margin-right: 3rem;
 }
+
 .btn-15:after {
   position: absolute;
   content: "";
@@ -1215,20 +1215,23 @@ $bp-mobile:800px;
   z-index: -1;
   background: rgb(245, 199, 8);
   box-shadow:
-   0 0 20px  rgb(245, 199, 8);
+    0 0 20px rgb(245, 199, 8);
   transition: all 0.3s ease;
 }
+
 .btn-15:hover {
   color: #fff;
 }
+
 .btn-15:hover:after {
   left: 0;
   width: 100%;
 }
+
 .btn-15.active {
   top: 2px;
   background: rgb(245, 199, 8);
-  box-shadow: 0 0 20px  rgb(245, 199, 8);
+  box-shadow: 0 0 20px rgb(245, 199, 8);
   z-index: 1;
   color: #fff;
 }
