@@ -2,4 +2,4 @@
 
 Portfolio hosted site with current projects.
 
-[LIVE DEMO](https://www.imfine.pl)
+[LIVE](https://www.imfine.pl)
