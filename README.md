@@ -10,4 +10,4 @@ You can view the site below:
 
 # Prerequisite
 
-I used Compile Hero Pro to compile SCSS files to ./dist directory
+I used Compile Hero Pro to compile SCSS files to CSS to ./dist directory
