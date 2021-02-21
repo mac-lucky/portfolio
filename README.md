@@ -8,4 +8,6 @@ You can view the site below:
 
 <p align="center"><a href="https://www.imfine.pl">LIVE SITE</a></p>
 
+# Prerequisite
 
+I used Compile Hero Pro to compile SCSS files to ./dist directory
