@@ -1,6 +1,6 @@
 /*fade out header on scroll*/
 
-let header = document.querySelector("header");
+let header = document.querySelector("#particles-js");
 window.addEventListener("scroll", function () {
   let value = 1 + window.scrollY / -400;
   header.style.opacity = value;
