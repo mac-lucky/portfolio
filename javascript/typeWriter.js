@@ -16,6 +16,6 @@ typewriter
   .pauseFor(100)
   .deleteChars(3)
   .typeString(
-    '<span style="color: #f5c708;">Kędziora</span><br>I program websites &<br>microcontrollers'
+    '<span style="color: #f5c708;">Kędziora</span><br>I develop websites &<br>microcontrollers'
   )
   .start();

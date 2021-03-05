@@ -128,12 +128,9 @@ nav ul li a {
 }
 
 .projects h1 {
+  padding-top: 3rem;
   margin-left: 10%;
-  padding-bottom: 5rem;
-}
-
-.center {
-  padding-top: 5rem;
+  padding-bottom: 3rem;
 }
 
 /* the text animation*/
@@ -1043,7 +1040,7 @@ nav ul li a {
   display: flex;
   justify-content: center;
   margin: auto;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 /* Style the tab content */
