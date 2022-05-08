@@ -11,11 +11,11 @@ var typewriter = new Typewriter(txt, {
 typewriter
   .pauseFor(500)
   .typeString(
-    'Hi, my name is<br><span style="color: #f5c708;">Maciej Ked</span>'
+    'Hi, My name is<br><span style="color: #f5c708;">Maciej Kędziora</span> <br>I develop'
   )
   .pauseFor(100)
-  .deleteChars(3)
+  .deleteChars(7)
   .typeString(
-    '<span style="color: #f5c708;">Kędziora</span><br>I develop websites &<br>microcontrollers'
+    'am <br>DevOps/System Engineer'
   )
   .start();
