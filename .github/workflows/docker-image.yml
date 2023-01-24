@@ -15,7 +15,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: name/app
+          images: maclucky/landing-page
           tags: |
             type=raw,value={{date 'YYYYMMDD'}}
       - name: Set up QEMU
