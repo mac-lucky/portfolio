@@ -16,6 +16,6 @@ typewriter
   .pauseFor(100)
   .deleteChars(7)
   .typeString(
-    'am <br>DevOps/System Engineer'
+    'am <br>DevOps Engineer'
   )
   .start();
