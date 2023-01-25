@@ -1,4 +1,4 @@
-/*fade out header on scroll*/
+/* fade out header on scroll */
 
 let header = document.querySelector("#particles-js");
 window.addEventListener("scroll", function () {
