@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
   header.style.opacity = value;
 });
 
-/* Copy to clipboard */
+/*Copy to clipboard*/
 
 
 function Clipboard_CopyTo(value) {
