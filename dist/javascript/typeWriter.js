@@ -11,7 +11,7 @@ var typewriter = new Typewriter(txt, {
 typewriter
   .pauseFor(500)
   .typeString(
-    'Hi, My name is<br><span style="color: #f5c708;">TESTT</span> <br>I develop'
+    'Hi, My name is<br><span style="color: #f5c708;">Maciej Kędziora</span> <br>I develop'
   )
   .pauseFor(100)
   .deleteChars(7)
