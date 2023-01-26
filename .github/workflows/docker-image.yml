@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: landing-page
+  IMAGE_NAME: mac-lucky/landing-page
 
 jobs:
   docker:
