@@ -43,7 +43,7 @@ jobs:
 
       - name: Run script to replace version in manifest
         env:
-          DATE: {{date 'YYYYMMDDhhmm'}}
+          DATE: ${{date 'YYYYMMDDhhmm'}}
         run: ./.github/scripts/deployment.sh $DATE
         shell: bash
 
