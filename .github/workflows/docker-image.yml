@@ -16,7 +16,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: maclucky/ux-ui-site
+          images: maclucky/landing-page
           tags: |
             type=raw,value={{date 'YYYYMMDDhh:mm'}}
 
