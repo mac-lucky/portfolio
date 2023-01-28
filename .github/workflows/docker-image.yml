@@ -42,11 +42,13 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Run script to replace version in manifest
-        run: ./.github/scripts/deployment.sh {{date 'YYYYMMDDhhmm'}}
+        env:
+          DATE: {{date 'YYYYMMDDhhmm'}}
+        run: ./.github/scripts/deployment.sh $DATE
         shell: bash
 
       - name: Update manifest for landingpage
-        uses: dmnemec/copy_file_to_another_repo_action@main
+        uses: dmnemec/co  py_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
