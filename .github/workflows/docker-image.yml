@@ -18,7 +18,7 @@ jobs:
         with:
           images: maclucky/landing-page
           tags: |
-            type=raw,value={{date 'YYYYMMDDhh:mm'}}
+            type=raw,value={{date 'YYYYMMDDhhmm'}}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
