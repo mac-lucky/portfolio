@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: portfolio-maciek
   replicas: 4 
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 2
   template:
     metadata:
       labels:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: portfolio-maciek
-        image: maclucky/landing-page:202301302037
+        image: maclucky/landing-page:202301302318
         ports:
         - containerPort: 80
