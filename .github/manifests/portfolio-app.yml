@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: portfolio-maciek
-        image: maclucky/landing-page:2.0
+        image: maclucky/landing-page:202301302037
         ports:
         - containerPort: 80
