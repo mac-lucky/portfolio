@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: portfolio-maciek
   replicas: 4 
-  revisionHistoryLimit: 1
+  revisionHistoryLimit: 3
   template:
     metadata:
       labels:
