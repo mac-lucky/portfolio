@@ -18,6 +18,7 @@ jobs:
           ref: master
           repository: mac-lucky/Kubernetes
           path: k8s
+          token: ${{ secrets.API_TOKEN_GITHUB }}
 
       - name: Copy file from external repository
         run: |
