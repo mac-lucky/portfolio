@@ -60,7 +60,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Run script to replace version in manifest
+      - name: chmod +x 
         run: |
           chmod +x .github/scripts/deployment.sh
 
