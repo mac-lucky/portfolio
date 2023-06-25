@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfolio website build with SCSS, HTML and Javascript.
+Portfolio website build with SCSS, HTML and JavaScript.
 
 You can view the site below:
 
