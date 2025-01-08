@@ -14,16 +14,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.API_TOKEN_GITHUB }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
       - name: Checkout external repository
         uses: actions/checkout@v3
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           ref: master
           repository: mac-lucky/Kubernetes
           path: k8s
-          token: ${{ secrets.API_TOKEN_GITHUB }}
           fetch-depth: 0
 
       - name: Copy file from external repository
