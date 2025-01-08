@@ -54,13 +54,16 @@ jobs:
           cache-to: type=gha,mode=max
 
   deploy:
-    needs: [build]
     permissions:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout external repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          ref: master
+          repository: mac-lucky/kubernetes
 
       - name: Get latest version tag
         id: get_latest_version
@@ -79,14 +82,6 @@ jobs:
           fi
           echo "NEW_VERSION=${NEW_VERSION}" >> $GITHUB_ENV
 
-
-      - name: Checkout external repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.API_TOKEN_GITHUB }}
-          ref: master
-          repository: mac-lucky/kubernetes  
-
       - name: Copy file from external repository
         run: |
           mkdir -p .github/manifests
@@ -96,7 +91,7 @@ jobs:
         run: |
           sed -i "s/landing-page.*/landing-page:$NEW_VERSION/g" .github/manifests/portfolio-app.yml
 
-      - name: Update manifest for landingpage
+      - name: Update manifest for portfolio
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
