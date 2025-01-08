@@ -52,7 +52,7 @@ jobs:
           cache-to: type=gha,mode=max
 
   deploy:
-    # needs: build
+    needs: build
     permissions:
       contents: write
     runs-on: ubuntu-latest
