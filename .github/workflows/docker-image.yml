@@ -103,7 +103,7 @@ jobs:
         with:
           source_file: ".github/manifests/portfolio-app.yml"
           destination_repo: "mac-lucky/kubernetes"
-          destination_folder: "portfolio-maciek"
+          destination_folder: "APPS/portfolio-maciek"
           user_email: "maciejkedziora98@gmail.com"
           user_name: "mac-lucky"
           destination_branch: "master"
