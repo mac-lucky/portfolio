@@ -6,7 +6,10 @@ on:
       - "master"
 
 jobs:
+
   build:
+    outputs:
+      NEW_VERSION: ${{ steps.set_version.outputs.NEW_VERSION }}
     permissions:
       contents: write
       packages: write
@@ -39,6 +42,7 @@ jobs:
         id: set_version
         run: |
           echo "NEW_VERSION=$(date +'%Y%m%d%H%M')" >> $GITHUB_ENV
+          echo "NEW_VERSION=$(date +'%Y%m%d%H%M')" >> $GITHUB_OUTPUT
 
       - name: Build and push
         uses: docker/build-push-action@v6
@@ -72,7 +76,7 @@ jobs:
 
       - name: Update version in manifest
         run: |
-          sed -i "s|image: maclucky/portfolio:.*|image: maclucky/portfolio:${{ env.NEW_VERSION }}|g" .github/manifests/portfolio-app.yml
+          sed -i "s|image: maclucky/portfolio:.*|image: maclucky/portfolio:${{ needs.build.outputs.NEW_VERSION }}|g" .github/manifests/portfolio-app.yml
 
       - name: Update manifest for portfolio
         uses: dmnemec/copy_file_to_another_repo_action@main
@@ -85,4 +89,4 @@ jobs:
           user_email: "maciejkedziora98@gmail.com"
           user_name: "mac-lucky"
           destination_branch: "master"
-          commit_message: "Update docker image to $LATEST_TAG"
+          commit_message: "Update docker image to ${{ needs.build.outputs.NEW_VERSION }}"
