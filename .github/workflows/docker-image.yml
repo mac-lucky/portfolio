@@ -76,17 +76,6 @@ jobs:
             | tail -n 1 || echo "")
           echo "LATEST_TAG=${LATEST_TAG}" >> $GITHUB_ENV
 
-      - name: Set version
-        id: set_version
-        run: |
-          VERSION=${{ env.LATEST_TAG }}
-          if [ -z "$VERSION" ]; then
-            NEW_VERSION="1.0.0"
-          else
-            NEW_VERSION=$(echo $VERSION | awk -F. -v OFS=. '{$NF++;print}')
-          fi
-          echo "NEW_VERSION=${NEW_VERSION}" >> $GITHUB_ENV
-
       - name: Copy file from external repository
         run: |
           mkdir -p .github/manifests
@@ -94,7 +83,7 @@ jobs:
 
       - name: Update version in manifest
         run: |
-          sed -i "s/landing-page.*/landing-page:$NEW_VERSION/g" .github/manifests/portfolio-app.yml
+          sed -i "s/portfolio.*/portfolio:$LATEST_TAG/g" .github/manifests/portfolio-app.yml
 
       - name: Update manifest for portfolio
         uses: dmnemec/copy_file_to_another_repo_action@main
@@ -107,4 +96,4 @@ jobs:
           user_email: "maciejkedziora98@gmail.com"
           user_name: "mac-lucky"
           destination_branch: "master"
-          commit_message: "Update docker image to $NEW_VERSION"
+          commit_message: "Update docker image to $LATEST_TAG"
