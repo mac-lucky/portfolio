@@ -7,10 +7,15 @@ on:
 
 jobs:
   docker:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          fetch-depth: 0
 
       - name: Checkout external repository
         uses: actions/checkout@v3
@@ -19,6 +24,7 @@ jobs:
           repository: mac-lucky/Kubernetes
           path: k8s
           token: ${{ secrets.API_TOKEN_GITHUB }}
+          fetch-depth: 0
 
       - name: Copy file from external repository
         run: |
