@@ -47,9 +47,7 @@ jobs:
           push: true
           tags: |
             maclucky/portfolio:${{ env.NEW_VERSION }}
-            maclucky/portfolio:latest
             ghcr.io/mac-lucky/portfolio:${{ env.NEW_VERSION }}
-            ghcr.io/mac-lucky/portfolio:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -83,7 +81,7 @@ jobs:
 
       - name: Update version in manifest
         run: |
-          sed -i "s/portfolio.*/portfolio:$LATEST_TAG/g" .github/manifests/portfolio-app.yml
+          sed -i "s|image: maclucky/portfolio:.*|image: maclucky/portfolio:${LATEST_TAG}|g" .github/manifests/portfolio-app.yml
 
       - name: Update manifest for portfolio
         uses: dmnemec/copy_file_to_another_repo_action@main
