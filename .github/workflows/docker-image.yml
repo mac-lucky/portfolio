@@ -52,7 +52,7 @@ jobs:
           cache-to: type=gha,mode=max
 
   deploy:
-    needs: build
+    # needs: build
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -65,15 +65,6 @@ jobs:
           repository: mac-lucky/kubernetes
           path: kubernetes
 
-      - name: Get latest version tag
-        id: get_latest_version
-        run: |
-          LATEST_TAG=$(curl -s "https://registry.hub.docker.com/v2/repositories/maclucky/portfolio/tags?page_size=100" \
-            | jq -r '.results[].name' \
-            | sort -V \
-            | tail -n 1 || echo "")
-          echo "LATEST_TAG=${LATEST_TAG}" >> $GITHUB_ENV
-
       - name: Copy file from external repository
         run: |
           mkdir -p .github/manifests
@@ -81,7 +72,7 @@ jobs:
 
       - name: Update version in manifest
         run: |
-          sed -i "s|image: maclucky/portfolio:.*|image: maclucky/portfolio:${LATEST_TAG}|g" .github/manifests/portfolio-app.yml
+          sed -i "s|image: maclucky/portfolio:.*|image: maclucky/portfolio:${{ env.NEW_VERSION }}|g" .github/manifests/portfolio-app.yml
 
       - name: Update manifest for portfolio
         uses: dmnemec/copy_file_to_another_repo_action@main
