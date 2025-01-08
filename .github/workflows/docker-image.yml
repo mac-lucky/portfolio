@@ -54,6 +54,7 @@ jobs:
           cache-to: type=gha,mode=max
 
   deploy:
+    needs: build
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -64,6 +65,7 @@ jobs:
           token: ${{ secrets.API_TOKEN_GITHUB }}
           ref: master
           repository: mac-lucky/kubernetes
+          path: kubernetes
 
       - name: Get latest version tag
         id: get_latest_version
