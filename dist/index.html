@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Portfolio Maciej Kędziora</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of Maciej Kędziora - DevOps/System Engineer" />
+    <meta name="theme-color" content="#f5c708" />
+    <meta property="og:title" content="Portfolio Maciej Kędziora" />
+    <meta property="og:description" content="DevOps/System Engineer Portfolio" />
+    <link rel="preload" href="/CSS/style.min.css" as="style">
+    <link rel="preload" href="/javascript/app.min.js" as="script">
+    
+    <title>Portfolio Maciej Kędziora</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="/CSS/style.css" />
     <link rel="stylesheet" href="/CSS/cards.css" />
     <link rel="stylesheet" href="/CSS/neon.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  </head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&family=Mukta&family=Montserrat:wght@200;400;600&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
 
-  <body id="HOME">
+<body id="HOME">
     <header>
       <nav class="mobile">
         <img src="/images/name.png" alt="logo" class="logo" />
@@ -48,6 +53,9 @@
             <h1 id="txt"></h1>
           </div>
         </section>
+        <div class="connection-info" id="connection-info">
+          Loading connection info...
+        </div>
       </div>
     </header>
     <section class="projects">
@@ -273,17 +281,27 @@
       </div>
       <p class="bottomtext">© 2022 Maciej Kędziora Projects</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="javascript/app.js"></script>
-    <script src="javascript/particle.js"></script>
-    <script src="javascript/stringRandom.js"></script>
-    <script src="javascript/tabs.js"></script>
-    <script src="javascript/typeWriter.js"></script>
-    <script src="javascript/hamburger.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+    <script src="https://unpkg.com/typewriter-effect@2.21.0/dist/core.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    
+    <!-- Application scripts -->
+    <script src="javascript/gsap.min.js" defer></script>
+    <script src="javascript/app.js" type="module"></script>
+    <script src="javascript/particle.js" defer></script>
+    <script src="javascript/stringRandom.js" defer></script>
+    <script src="javascript/tabs.js" defer></script>
+    <script src="javascript/typeWriter.js" defer></script>
+    <script src="javascript/hamburger.js" defer></script>
+    <script src="javascript/connectionInfo.js" defer></script>
+    
     <script>
-      AOS.init();
+        window.addEventListener('load', function() {
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        });
     </script>
-  </body>
+</body>
 </html>

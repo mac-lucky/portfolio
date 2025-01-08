@@ -1097,3 +1097,24 @@ nav ul li a {
   z-index: 1;
   color: #fff;
 }
+
+.connection-info {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #f5c708;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+  .connection-info {
+    bottom: 60px;
+    font-size: 10px;
+    max-width: 280px;
+  }
+}
