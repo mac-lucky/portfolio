@@ -85,14 +85,12 @@ jobs:
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
           ref: master
-          repository: mac-lucky/kubernetes
-          path: APPS/portfolio-maciek
-          
+          repository: mac-lucky/kubernetes  
 
       - name: Copy file from external repository
         run: |
           mkdir -p .github/manifests
-          cp APPS/portfolio-maciek/portfolio-app.yml .github/manifests/portfolio-app.yml
+          cp kubernetes/APPS/portfolio-maciek/portfolio-app.yml .github/manifests/portfolio-app.yml
 
       - name: Update version in manifest
         run: |
