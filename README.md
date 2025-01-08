@@ -4,7 +4,7 @@ Portfolio website build with SCSS, HTML and JavaScript.
 
 You can view the site below:
 
-<p align="center"><a href="https://www.imfine.pl">LIVE SITE</a></p>
+<p align="center"><a href="https://www.portfolio.macluckylab.com">LIVE SITE</a></p>
 
 # Prerequisite
 

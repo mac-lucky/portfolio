@@ -6,74 +6,92 @@ on:
       - "master"
 
 jobs:
-  docker:
+  build:
+    permissions:
+      contents: write
+      packages: write
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Log in to Docker
+        uses: docker/login-action@v3
+        with:
+          registries: |
+            docker.io
+            ghcr.io
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+
+      - name: Set version from date
+        id: set_version
+        run: |
+          echo "NEW_VERSION=$(date +'%Y%m%d%H%M')" >> $GITHUB_ENV
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            maclucky/portfolio:${{ env.NEW_VERSION }}
+            maclucky/portfolio:latest
+            ghcr.io/mac-lucky/portfolio:${{ env.NEW_VERSION }}
+            ghcr.io/mac-lucky/portfolio:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
     permissions:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get latest version tag
+        id: get_latest_version
+        run: |
+          LATEST_TAG=$(curl -s "https://registry.hub.docker.com/v2/repositories/maclucky/portfolio/tags?page_size=100" | jq -r '.results[].name' | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n 1 || echo "")
+          echo "LATEST_TAG=${LATEST_TAG}" >> $GITHUB_ENV
+
+      - name: Set version
+        id: set_version
+        run: |
+          VERSION=${{ env.LATEST_TAG }}
+          if [ -z "$VERSION" ]; then
+            NEW_VERSION="1.0.0"
+          else
+            NEW_VERSION=$(echo $VERSION | awk -F. -v OFS=. '{$NF++;print}')
+          fi
+          echo "NEW_VERSION=${NEW_VERSION}" >> $GITHUB_ENV
+
 
       - name: Checkout external repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.API_TOKEN_GITHUB }}
           ref: master
-          repository: mac-lucky/Kubernetes
-          path: k8s
-          fetch-depth: 0
+          repository: mac-lucky/kubernetes
+          path: APPS/portfolio-maciek
+          
 
       - name: Copy file from external repository
         run: |
           mkdir -p .github/manifests
-          cp k8s/portfolio-maciek/portfolio-app.yml .github/manifests/portfolio-app.yml
+          cp APPS/portfolio-maciek/portfolio-app.yml .github/manifests/portfolio-app.yml
 
-      - name: Delete the folder k8s
+      - name: Update version in manifest
         run: |
-          rm -rf k8s
-
-      - name: Set current date as env variable
-        run: echo "NOW=$(date +'%Y%m%d%H%M')" >> $GITHUB_ENV
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: maclucky/landing-page
-          tags: |
-            type=raw,value={{date 'YYYYMMDDHHmm'}}
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build and push image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-
-      - name: chmod +x 
-        run: |
-          chmod +x .github/scripts/deployment.sh
-
-      - name: Run script to replace version in manifest
-        run: ./.github/scripts/deployment.sh $NOW
-        shell: bash
+          sed -i "s/landing-page.*/landing-page:$NEW_VERSION/g" .github/manifests/portfolio-app.yml
 
       - name: Update manifest for landingpage
         uses: dmnemec/copy_file_to_another_repo_action@main
@@ -81,9 +99,9 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source_file: ".github/manifests/portfolio-app.yml"
-          destination_repo: "mac-lucky/Kubernetes"
+          destination_repo: "mac-lucky/kubernetes"
           destination_folder: "portfolio-maciek"
           user_email: "maciejkedziora98@gmail.com"
           user_name: "mac-lucky"
           destination_branch: "master"
-          commit_message: "Update docker image to $NOW"
+          commit_message: "Update docker image to $NEW_VERSION"
