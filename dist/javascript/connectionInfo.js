@@ -26,7 +26,6 @@ async function getConnectionInfo() {
         
         const infoHtml = `
             Hello there! It looks like you're browsing from ${locationData.cityName || 'Unknown'}, ${locationData.regionName || 'Unknown'}, ${locationData.countryName || 'Unknown'} using ${browserInfo.browserName}.<br>
-            Time zone: ${locationData.timeZone || browserInfo.timeZone}<br>
             Platform: ${platform}<br>
             The current weather in ${locationData.cityName} is ${weatherData}.<br>
             Have a great day!
