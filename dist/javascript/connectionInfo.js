@@ -1,9 +1,9 @@
 async function getConnectionInfo() {
     try {
-        const locationResponse = await fetch('http://ip-api.com/json/');
+        const locationResponse = await fetch('https://freeipapi.com/api/json/');
         const locationData = await locationResponse.json();
         
-        const weatherResponse = await fetch(`https://wttr.in/${locationData.city}?format=%C+%t`);
+        const weatherResponse = await fetch(`https://wttr.in/${locationData.cityName}?format=%C+%t`);
         const weatherData = await weatherResponse.text();
 
         // Get browser name from user agent
@@ -17,24 +17,18 @@ async function getConnectionInfo() {
             return "Unknown";
         };
 
-        // Additional legitimate browser information
         const browserInfo = {
-            userAgent: navigator.userAgent,
-            language: navigator.language,
-            cookiesEnabled: navigator.cookieEnabled,
-            doNotTrack: navigator.doNotTrack,
-            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-            browserName: getBrowserName()
+            browserName: getBrowserName(),
+            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
         };
         
         const platform = navigator.userAgentData?.platform || navigator.userAgent.match(/\(([^)]+)\)/)?.[1] || 'Unknown';
         
         const infoHtml = `
-            Hello there! It looks like you're browsing from ${locationData.city || 'Unknown'}, ${locationData.country || 'Unknown'} using ${browserInfo.browserName}.<br>
-            Your ISP is ${locationData.isp || 'Unknown'}.<br>
-            Fun fact: Your current time zone is ${browserInfo.timeZone}.<br>
+            Hello there! It looks like you're browsing from ${locationData.cityName || 'Unknown'}, ${locationData.regionName || 'Unknown'}, ${locationData.countryName || 'Unknown'} using ${browserInfo.browserName}.<br>
+            Time zone: ${locationData.timeZone || browserInfo.timeZone}<br>
             Platform: ${platform}<br>
-            The current weather in ${locationData.city} is ${weatherData}.<br>
+            The current weather in ${locationData.cityName} is ${weatherData}.<br>
             Have a great day!
         `;
         
