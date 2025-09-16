@@ -48,12 +48,18 @@ async function getConnectionInfo() {
           let city = data.city || data.cityName || null;
           let region = data.region || data.regionName || data.region_name || null;
           let country = data.country || data.countryName || data.country_name || null;
+          let timezone = data.timezone || data.timeZone || null;
+          let isp = data.isp || data.org || null;
+          let ip = data.ip || data.query || null;
           
           if (city && city !== "Unknown City" && city !== "Unknown" && city.trim() !== "") {
             locationData = {
               cityName: city,
               regionName: region,
-              countryName: country
+              countryName: country,
+              timeZone: timezone,
+              isp: isp,
+              ip: ip
             };
             console.log('Successfully got location data:', locationData);
             break; // Success, exit the loop
@@ -102,8 +108,11 @@ async function getConnectionInfo() {
     }
 
     const infoHtml = `
-            Hello there! It looks like you're browsing ${locationString ? `from ${locationString} ` : ""}using<br> 
-            ${browserInfo.browserName} on ${platform}<br>
+            Hello there! It looks like you're browsing ${locationString ? `from ${locationString} ` : ""}using ${browserInfo.browserName}.<br>
+            Time zone: ${locationData.timeZone || browserInfo.timeZone}<br>
+            Platform: ${platform}<br>
+            ${locationData.ip ? `IP Address: ${locationData.ip}<br>` : ""}
+            ${locationData.isp ? `ISP: ${locationData.isp}<br>` : ""}
             ${locationString && weatherData !== "a great day" ? `The current weather in ${locationData.cityName} is ${weatherData}.<br>` : ""}
             Have a great day!
         `;
@@ -125,8 +134,11 @@ async function getConnectionInfo() {
 
     const platform = navigator.userAgentData?.platform || navigator.userAgent.match(/\(([^)]+)\)/)?.[1] || "Unknown";
     
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     document.getElementById("connection-info").innerHTML = `
-      Hello there! It looks like you're using ${getBrowserName()} on ${platform}.<br>
+      Hello there! It looks like you're using ${getBrowserName()}.<br>
+      Time zone: ${timeZone}<br>
+      Platform: ${platform}<br>
       Have a great day!
     `;
   }
