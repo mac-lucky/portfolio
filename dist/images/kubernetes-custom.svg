@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="kubernetesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#326ce5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a4ba8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#kubernetesGrad)"/>
+  
+  <!-- Kubernetes helm wheel symbol -->
+  <g transform="translate(200,200)">
+    <!-- Outer circle -->
+    <circle r="120" fill="none" stroke="#ffffff" stroke-width="8"/>
+    
+    <!-- Center circle -->
+    <circle r="20" fill="#ffffff"/>
+    
+    <!-- Spokes -->
+    <g stroke="#ffffff" stroke-width="6" fill="none">
+      <line x1="0" y1="-120" x2="0" y2="-40"/>
+      <line x1="104" y1="-60" x2="35" y2="-20"/>
+      <line x1="104" y1="60" x2="35" y2="20"/>
+      <line x1="0" y1="120" x2="0" y2="40"/>
+      <line x1="-104" y1="60" x2="-35" y2="20"/>
+      <line x1="-104" y1="-60" x2="-35" y2="-20"/>
+    </g>
+    
+    <!-- Network nodes -->
+    <circle cx="0" cy="-100" r="8" fill="#ffffff"/>
+    <circle cx="87" cy="-50" r="8" fill="#ffffff"/>
+    <circle cx="87" cy="50" r="8" fill="#ffffff"/>
+    <circle cx="0" cy="100" r="8" fill="#ffffff"/>
+    <circle cx="-87" cy="50" r="8" fill="#ffffff"/>
+    <circle cx="-87" cy="-50" r="8" fill="#ffffff"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="200" y="350" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold">KUBERNETES</text>
+  <text x="200" y="375" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16">Ping Exporter</text>
+</svg>

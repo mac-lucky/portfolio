@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Maciej Kędziora - DevOps/System Engineer" />
+    <meta name="description" content="Portfolio of Maciej Kędziora - Senior DevOps Engineer" />
     <meta property="og:title" content="Portfolio Maciej Kędziora" />
-    <meta property="og:description" content="DevOps/System Engineer Portfolio" />
+    <meta property="og:description" content="Senior DevOps Engineer | AWS | Kubernetes | Terraform | CI/CD" />
     
     <title>Portfolio Maciej Kędziora</title>
     
@@ -62,10 +62,67 @@
         </div>
       </div>
       <div class="tab">
-        <button class="tablinks custom-btn btn-15" onclick="openCity(event, 'webdev')" id="defaultOpen">Web Dev</button>
+        <button class="tablinks custom-btn btn-15" onclick="openCity(event, 'devops')" id="defaultOpen">DevOps</button>
+        <button class="tablinks custom-btn btn-15" onclick="openCity(event, 'webdev')">Web Dev</button>
         <button class="tablinks custom-btn btn-15" onclick="openCity(event, 'microcontrollers')">Micro chip</button>
       </div>
       <div class="projectcard">
+        <div class="page-content tabcontent" id="devops">
+          <div class="cardweb">
+            <div class="content">
+              <h2 class="title">Kubernetes Ping Exporter</h2>
+              <p class="copy">Go-based Prometheus exporter for monitoring network connectivity from Kubernetes clusters</p>
+              <a target="blank" href="https://github.com/mac-lucky/kubernetes-ping-exporter">
+                <button class="btn">GitHub</button>
+              </a>
+            </div>
+          </div>
+          <div class="cardweb">
+            <div class="content">
+              <h2 class="title">TCP Endpoint Check Exporter</h2>
+              <p class="copy">Go application for monitoring TCP endpoint availability with Prometheus metrics</p>
+              <a target="blank" href="https://github.com/mac-lucky/tcp-endpoint-check-exporter">
+                <button class="btn">GitHub</button>
+              </a>
+            </div>
+          </div>
+          <div class="cardweb">
+            <div class="content">
+              <h2 class="title">NVIDIA GPU Exporter Plugin</h2>
+              <p class="copy">Unraid plugin for monitoring NVIDIA GPU metrics with Prometheus integration</p>
+              <a target="blank" href="https://github.com/mac-lucky/nvidia-gpu-exporter-unraid-plugin">
+                <button class="btn">GitHub</button>
+              </a>
+            </div>
+          </div>
+          <div class="cardweb">
+            <div class="content">
+              <h2 class="title">Caddy with Cloudflare</h2>
+              <p class="copy">Caddy web server configuration with Cloudflare integration for automated SSL and DNS</p>
+              <a target="blank" href="https://github.com/mac-lucky/caddy-cloudflare">
+                <button class="btn">GitHub</button>
+              </a>
+            </div>
+          </div>
+          <div class="cardweb">
+            <div class="content">
+              <h2 class="title">Bazarr Auto Translate</h2>
+              <p class="copy">Python automation tool for subtitle translation in Bazarr media management</p>
+              <a target="blank" href="https://github.com/mac-lucky/bazarr-auto-translate">
+                <button class="btn">GitHub</button>
+              </a>
+            </div>
+          </div>
+          <div class="cardweb">
+            <div class="content">
+              <h2 class="title">BambuLab Timelapse Downloader</h2>
+              <p class="copy">Python script for automated downloading of BambuLab 3D printer timelapses</p>
+              <a target="blank" href="https://github.com/mac-lucky/bambulab-timelapse-downloader">
+                <button class="btn">GitHub</button>
+              </a>
+            </div>
+          </div>
+        </div>
         <div class="page-content tabcontent" id="webdev">
           <div class="cardweb">
             <div class="content">
@@ -189,26 +246,38 @@
       <div class="wrapper">
         <span id="neon" class="txt">SKILLS</span>
       </div>
-      <div class="allskills">
+      <div class="allskills dense">
         <div class="left">
-          <h1 data-aos="fade-down">Linux, Windows</h1>
+          <h1 data-aos="fade-down">AWS Cloud Infrastructure</h1>
           <img data-aos="fade-up" src="/images/violet.png" alt="violet" />
         </div>
         <div class="right">
-          <h1 data-aos="fade-down">Terraform, Ansible</h1>
+          <h1 data-aos="fade-down">Kubernetes & Docker</h1>
           <img data-aos="fade-up" src="/images/red.png" />
         </div>
         <div class="left">
-          <h1 data-aos="fade-down">Docker/Portainer</h1>
+          <h1 data-aos="fade-down">Terraform & Infrastructure as Code</h1>
           <img data-aos="fade-up" src="/images/violet.png" />
         </div>
         <div class="right">
-          <h1 data-aos="fade-down">Azure DevOps, Jenkins, TeamCity</h1>
+          <h1 data-aos="fade-down">Prometheus & Grafana Monitoring</h1>
           <img data-aos="fade-up" src="/images/red.png" />
         </div>
         <div class="left">
-          <h1 data-aos="fade-down">git, Jira</h1>
+          <h1 data-aos="fade-down">CI/CD: GitLab, Jenkins, GitHub Actions</h1>
           <img data-aos="fade-up" src="/images/violet.png" />
+        </div>
+        <div class="right">
+          <h1 data-aos="fade-down">Python, Go, Bash Scripting</h1>
+          <img data-aos="fade-up" src="/images/red.png" />
+        </div>
+        <div class="left">
+          <h1 data-aos="fade-down">Ansible Automation</h1>
+          <img data-aos="fade-up" src="/images/violet.png" />
+        </div>
+        <div class="right">
+          <h1 data-aos="fade-down">Linux & Windows Systems</h1>
+          <img data-aos="fade-up" src="/images/red.png" />
         </div>
       </div>
     </section>
@@ -226,10 +295,11 @@
               microcontroller programming.
             </p>
             <p data-aos="fade-up" data-aos-delay="70">
-              Right now I am working as DevOps/System Engineer. On daily basis I work with clients like Citi, mBank,
-              Actinver. My responsibilities are implementation activities (new software installation on bank's on-prem
-              servers), preparing installation packages for new enviroments, creating internal enviroments, Improving
-              Azure DevOps/TeamCity pipelines
+              Currently working as a DevOps Engineer at Univio, where I build AWS cloud infrastructure in collaboration
+              with solution architects. I manage Infrastructure as Code with Terraform ensuring 100% system coverage,
+              develop monitoring systems using Prometheus & Grafana, and create CI/CD pipelines in GitLab to support
+              development teams. Previously worked at Abaro.net managing Kubernetes clusters, DC/OS Blue-Green deployments,
+              and automation with Python/Bash scripts.
             </p>
             <p data-aos="fade-up" data-aos-delay="70">
               I am a technology lover, I am eager to discover and learn new things, and I pursue my goals with great
@@ -276,7 +346,7 @@
           </a>
         </div>
       </div>
-      <p class="bottomtext">© 2022 Maciej Kędziora Projects</p>
+      <p class="bottomtext">© 2025 Maciej Kędziora Projects</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
     <script src="https://unpkg.com/typewriter-effect@2.21.0/dist/core.js" defer></script>

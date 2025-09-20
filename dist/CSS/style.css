@@ -305,22 +305,61 @@ nav ul li a {
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
 }
-.cardweb:nth-child(1):before {
+/* DevOps tab project images */
+#devops .cardweb:nth-child(1):before {
+  background-image: url(/images/kubernetes-custom.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#devops .cardweb:nth-child(2):before {
+  background-image: url(/images/tcp-monitor.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#devops .cardweb:nth-child(3):before {
+  background-image: url(/images/nvidia-gpu.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#devops .cardweb:nth-child(4):before {
+  background-image: url(/images/caddy-cloudflare.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#devops .cardweb:nth-child(5):before {
+  background-image: url(/images/bazarr-translate.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#devops .cardweb:nth-child(6):before {
+  background-image: url(/images/bambulab-timelapse.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Web Dev tab project images */
+#webdev .cardweb:nth-child(1):before {
   background-image: url(/images/piero.png);
 }
-.cardweb:nth-child(2):before {
+#webdev .cardweb:nth-child(2):before {
   background-image: url(/images/covid.png);
 }
-.cardweb:nth-child(3):before {
+#webdev .cardweb:nth-child(3):before {
   background-image: url(/images/designpage.png);
 }
-.cardweb:nth-child(4):before {
+#webdev .cardweb:nth-child(4):before {
   background-image: url(/images/music.png);
 }
-.cardweb:nth-child(5):before {
+#webdev .cardweb:nth-child(5):before {
   background-image: url(/images/maliwspaniali.png);
 }
-.cardweb:nth-child(6):before {
+#webdev .cardweb:nth-child(6):before {
   background-image: url(/images/weather.png);
 }
 
@@ -644,7 +683,15 @@ nav ul li a {
 .allskills {
   width: 70%;
   margin-left: 15%;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
+}
+
+.allskills.dense .left {
+  padding-top: 4rem;
+}
+
+.allskills.dense .right {
+  padding-top: 2rem;
 }
 
 .wrapper {
@@ -789,7 +836,7 @@ nav ul li a {
 }
 
 .left {
-  padding-top: 9rem;
+  padding-top: 6rem;
   width: 40%;
   text-align: center;
 }
@@ -1106,7 +1153,7 @@ nav ul li a {
   color: #f5c708;
   padding: 10px;
   border-radius: 5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   z-index: 1000;
 }
